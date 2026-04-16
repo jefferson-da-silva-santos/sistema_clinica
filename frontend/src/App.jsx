@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef, createContext, useContext } f
 import "./App.css";
 
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
-const API = "http://127.0.0.1:3456/api";
+const API = "http://127.0.0.1:3009/api";
 
 // ─── CONTEXT ─────────────────────────────────────────────────────────────────
 const AppContext = createContext(null);
@@ -1077,7 +1077,7 @@ function DetalheAtendimento({ at, onFechar }) {
           ) : anexos.map(a => (
             <div key={a.id} className="anexo-item">
               <i className={`bx ${a.tipo_mime?.includes("pdf") ? "bxs-file-pdf" : a.tipo_mime?.includes("image") ? "bxs-image" : "bxs-file-doc"}`} />
-              <a href={`http://127.0.0.1:3456/uploads/${a.nome_arquivo}`} target="_blank" rel="noreferrer">{a.nome_original}</a>
+              <a href={`http://127.0.0.1:3009/uploads/${a.nome_arquivo}`} target="_blank" rel="noreferrer">{a.nome_original}</a>
               <span className="text-muted">{Math.round(a.tamanho_bytes / 1024)} KB</span>
               <button className="icon-btn danger sm" onClick={() => handleRemoverAnexo(a.id)}><i className="bx bx-x" /></button>
             </div>

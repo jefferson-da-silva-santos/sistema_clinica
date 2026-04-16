@@ -16,7 +16,7 @@ const crypto = require('crypto');
 
 // ─── CONFIG ──────────────────────────────────────────────────────────────────
 
-const PORT = process.env.PORT || 3456;
+const PORT = 3009;
 const IS_PKG = typeof process.pkg !== 'undefined';
 const BASE_DIR = IS_PKG ? path.dirname(process.execPath) : __dirname;
 const DATA_DIR = path.join(BASE_DIR, 'clinicadesk_data');
